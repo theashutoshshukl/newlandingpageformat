@@ -15,345 +15,359 @@
     <link href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
     <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            height: 100%;
-        }
+          body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
 
-        .hero {
-            position: relative;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            background: url("https://blogger.googleusercontent.com/img/a/AVvXsEjpBgLPnDOLSb6NqnKDQAIG9MwZPYR4OgiVHQH0y38eiLz0Dj22V7Ooo1AuAptCdLToQD2daN9EgBvHTn2MAOVc5V646MHVNaIfL1U4Pzvgl99VDo3RunaoYmuZmguLzrBjFU9aE_WMO7qIfAGLNq57DHgZTjrpr0AmzS_RwqxYaYqKdBFISILLQnzpQHA") no-repeat center center;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            z-index: 2;
-        }
+  .hero {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url(img/Gn-IEXvPn2dkGdkAKxtzscAUWpNy7bKhEAUu1jHfWSP6TWlATse4n797efiAoJHte79AooKMaSkT3HaWtwP7dTYcaTxDSQWUZPFElDnz7cSd8_Z-Vrdbh8DjTXlQUG7DGY2gV5iEVtflkMUcdEzj9xCPoOeHymmW1EeifzdYGCG3icoD5GM92Luhnj) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+  }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: -1;
-        }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
 
-        .heading1 {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 2.3rem;
-            color: #fff;
-            margin-bottom: 0;
-        }
+  .heading1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.3rem;
+    color: #fff;
+    margin-top:-120px;
+    margin-bottom: 0;
+  }
 
-        h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            color: #fff;
-            margin-bottom: 40px;
-        }
+  h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 40px;
+  }
 
-        .paragraph,
-        .counter {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.2rem;
-            color: #ffffff;
-            margin-top: 100px;
-        }
+  .paragraph,
+  .counter {
+    font-family: 'Open Sans', sans-serif;
+    font-size:1.2rem;
+    color: #ffffff;
+    margin-top: 20px;
+    
+   
+   
+  }
 
-        .blink {
-            animation: blink-animation 1.0s steps(5, start) infinite;
-            -webkit-animation: blink-animation 1.0s steps(5, start) infinite;
-        }
+  .blink {
+    animation: blink-animation 1.0s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.0s steps(5, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
 
-        @keyframes blink-animation {
-            to {
-                visibility: hidden;
-            }
-        }
+  #countdown,  #countdown2{
+    font-family: 'Oswald', sans-serif;
+    color:white;
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
 
-        @-webkit-keyframes blink-animation {
-            to {
-                visibility: hidden;
-            }
-        }
+  #countdown{
+   font-size: 2rem;
+  }
 
-        #countdown,
-        #countdown2 {
-            font-family: 'Oswald', sans-serif;
-            color: white;
-            margin-top: -15px;
-            margin-bottom: -15px;
-        }
+  #countdown2{
+   font-size: 1.5rem;
+  }
 
-        #countdown {
-            font-size: 2rem;
-        }
+  .points {
+    color: #fff;
+    margin-top: 0;
+    
+    
+  }
 
-        #countdown2 {
-            font-size: 1.5rem;
-        }
 
-        .points {
-            color: #fff;
-            margin-top: 0;
-        }
+  .points .fa-solid {
+    color:rgb(0, 186, 248);
+  }
 
-        .points .fa-solid {
-            color: rgb(0, 186, 248);
-        }
+  .points ul {
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: left;
+  }
 
-        .points ul {
-            list-style-type: none;
-            margin-top: 20px;
-            text-align: left;
-        }
+  .points ul li {
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
-        .points ul li {
-            margin-bottom: 20px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-        }
+ 
 
-        .button1 {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: -80px;
-        }
+  .button1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -80px;
+  }
 
-        .button1 a,
-        .button2 a {
-            font-family: 'Oswald', sans-serif;
-            padding: 15px 30px;
-            background: #FFD700;
-            color: #000;
-            font-size: 40px;
-            line-height: 48px;
-            border: none;
-            cursor: pointer;
-            animation: buttonAnimation 2s infinite;
-            text-decoration: none;
-        }
+  .button1 a, .button2 a {
+    font-family: 'Oswald', sans-serif;
+    padding: 15px 30px;
+    background: #FFD700;
+    color: #000;
+    font-size: 40px;
+    line-height: 48px;
+    border: none;
+    cursor: pointer;
+    animation: buttonAnimation 2s infinite;
+    text-decoration: none;
+  }
 
-        .button2 a {
-            display: inline-block;
-            border-radius: 5px;
-        }
+  .button2 a {
+    display: inline-block;
+    border-radius: 5px;
+  }
 
-        .button1 a {
-            padding: 15px 0;
-            width: 100%;
-            box-sizing: border-box;
-            text-align: center;
-        }
+  .button1 a {
+    padding: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
 
-        .button1 a:hover,
-        .button2 a:hover {
-            animation-play-state: paused;
-        }
+  .button1 a:hover,
+  .button2 a:hover {
+    animation-play-state: paused;
+  }
 
-        .button1 {
-            margin-top: 0;
-            margin-bottom: 80px;
-        }
+  .button1 {
+    margin-top: 0px;
+    margin-bottom: 80px;
+}
 
-        @keyframes buttonAnimation {
-            0% {
-                transform: scale(1);
-            }
+  @keyframes buttonAnimation {
+    0% {
+      transform: scale(1);
+    }
 
-            50% {
-                transform: scale(1.2);
-            }
+    50% {
+      transform: scale(1.2);
+    }
 
-            100% {
-                transform: scale(1);
-            }
-        }
+    100% {
+      transform: scale(1);
+    }
+  }
 
-        @media (max-width: 480px) {
-            .heading1 {
-                font-size: 2.0rem;
-            }
+  /*Mobile Responsive*/
+  @media (max-width: 480px) {
+    .heading1 {
+      font-size: 2.0rem;
+    }
 
-            h4 {
-                font-size: 1.5rem;
-            }
+    h4 {
+      font-size: 1.5rem;
+    }
 
-            .paragraph {
-                font-size: 20px;
-            }
+    .paragraph {
+      font-size: 20px;
+    }
 
-            .button2 a {
-                font-size: 22px;
-                padding: 10px 40px;
-            }
+    .button2 a {
+      font-size: 22px;
+      padding: 10px 40px;
+    }
 
-            .button1 a {
-                font-size: 20px;
-                padding: 5px 0;
-            }
+    .button1 a {
+      font-size: 20px;
+      padding: 5px 0;
+    }
 
-            .counter {
-                font-size: 1.4rem;
-                margin-top: 15px;
-            }
-        }
 
-        .content-wrapper {
-            display: flex;
-            align-items: center;
-        }
+    .counter {
+      font-size: 1.4rem;
+      margin-top: 15px;
+    }
+  
+    
+   
+  }
+  
+  /* New styles for arranging elements */
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+  }
 
-        .counter {
-            text-align: center;
-        }
+  .counter {
+   
+    text-align: center;
+  }
 
-        .points {
-            flex: 2;
-        }
+  .points {
+    flex: 2;
+  }
 
-        .button4 {
-            display: inline-block;
-            padding: 0.75rem 1.25rem;
-            border-radius: 10rem;
-            color: white;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            letter-spacing: 0.15rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            text-decoration: none;
-            margin-top: 3rem;
-        }
+  .button4 {
+    
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+    margin-top: 3rem;
+   
+   
+  }
+  
 
-        @media only screen and (max-width: 600px) {
-            .glowing-btn {
-                font-size: 1em;
-            }
-        }
 
-        @-webkit-keyframes stripe-slide {
-            0% {
-                background-position: 0% 0;
-            }
 
-            100% {
-                background-position: 100% 0;
-            }
-        }
+@media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+@-webkit-keyframes stripe-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+@keyframes stripe-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
 
-        @keyframes stripe-slide {
-            0% {
-                background-position: 0% 0;
-            }
 
-            100% {
-                background-position: 100% 0;
-            }
-        }
 
-        .h2 {
-            color: white;
-            margin-bottom: -40px;
-        }
 
-        .back {
-            color: white;
-            border: solid 1px white;
-            border-radius: 5px;
-            padding-bottom: 10px;
-            padding-left: 8px;
-            padding-right: 8px;
-            list-style-type: none;
-            animation: buttonAnimationn 1s infinite;
-            text-decoration: none;
-        }
+.h2{
+ 
+  color:white;
+  margin-bottom: -40px;
+}
 
-        @keyframes buttonAnimationn {
-            0% {
-                background-color: rgb(0, 195, 255);
-                color: black;
-            }
 
-            50% {
-                background-color: rgb(0, 0, 0);
-                color: white;
-            }
+.back {
+  color: white;
+  border: solid 1px  white;;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  list-style-type: none;
+  animation: buttonAnimationn 1s infinite;
+  text-decoration: none;
+  
+}
 
-            100% {
-                background-color: rgb(0, 195, 255);
-                color: black;
-            }
-        }
 
-        .pd {
-            font-size: 30px;
-            padding-top: 10px;
-            border-radius: 30px;
-        }
+@keyframes buttonAnimationn {
+  0% {
+     
+      background-color: rgb(0, 195, 255);
+      color: black;
+  }
+  50% {
+      
+      background-color: rgb(0, 0, 0);
+      color: white;
+  }
+  100% {
+     
+      background-color: rgb(0, 195, 255);
+      color: black;
+  }
+}
+.pd{
+  font-size: 30px;
+  padding-top: 10px;
+  border-radius: 30px;
+}
+.button1 a {
+ 
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+    padding: 15px 30px;
+    width: 360px;
+    color: #fff;
+    font-size: 30px;
+    
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    animation: buttonAnimation 1.5s infinite;
+    text-decoration: none;
+}
 
-        .button1 a {
-            display: inline-block;
-            font-family: 'Oswald', sans-serif;
-            padding: 15px 30px;
-            width: 360px;
-            color: #fff;
-            font-size: 30px;
-            border: none;
-            border-radius: 40px;
-            cursor: pointer;
-            animation: buttonAnimation 1.5s infinite;
-            text-decoration: none;
-        }
+.button1 a:hover{
+    animation-play-state: paused;
+}
 
-        .button1 a:hover {
-            animation-play-state: paused;
-        }
 
-        @keyframes buttonAnimation {
+@keyframes buttonAnimation {
+  0%, 20%, 50%, 80%, 100% {
+    background-color: rgb(0, 195, 255);
+    transform: translateY(0);
+    color: black;
+}
+40% { background-color: rgb(0, 0, 0);
+    transform: translateY(-20px);
+    color: white;
+}
+60% { background-color: rgb(0, 0, 0);
+    transform: translateY(-10px);
+    color: white;
+}
+}
 
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                background-color: rgb(0, 195, 255);
-                transform: translateY(0);
-                color: black;
-            }
-
-            40% {
-                background-color: rgb(0, 0, 0);
-                transform: translateY(-20px);
-                color: white;
-            }
-
-            60% {
-                background-color: rgb(0, 0, 0);
-                transform: translateY(-10px);
-                color: white;
-            }
-        }
-
-        .mgbt {
-            margin-bottom: -5px;
-            margin-top: 10px;
-        }
+.mgbt{
+  margin-bottom: -5px;
+  margin-top: 10px;
+}
     </style>
 
 </head>
